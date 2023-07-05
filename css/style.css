@@ -88,8 +88,9 @@ blockquote {
   border-left: 10px solid #ccc;
   margin: 1.5em 10px;
   padding: 0.5em 10px;
-  quotes: "\201C""\201D""\2018""\2019";
+  quotes: "\201C" "\201D" "\2018" "\2019";
 }
+
 blockquote:before {
   color: #ccc;
   content: open-quote;
@@ -98,6 +99,7 @@ blockquote:before {
   margin-right: 0.25em;
   vertical-align: -0.4em;
 }
+
 blockquote p {
   display: inline;
 }
@@ -190,6 +192,7 @@ video {
   font-size: 100%;
   vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
@@ -204,10 +207,12 @@ nav,
 section {
   display: block;
 }
+
 blockquote,
 q {
   quotes: none;
 }
+
 blockquote:before,
 blockquote:after,
 q:before,
@@ -215,6 +220,7 @@ q:after {
   content: "";
   content: none;
 }
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -228,6 +234,7 @@ html {
   font-size: 137.5%;
   -webkit-font-smoothing: antialiased;
 }
+
 /* Copy & Lists */
 p {
   line-height: 1.5rem;
@@ -258,9 +265,10 @@ blockquote {
   background: rgba(165, 165, 165, 0.15);
   border-left: 10px solid#dcdcdc;
   border-left: 10px solid rgb(192.5, 192.5, 192.5);
-  margin: 1.618em 0.618rem; /* Comment-A */
+  margin: 1.618em 0.618rem;
+  /* Comment-A */
   padding: 0.618em 0.618rem;
-  quotes: "\201C""\201D""\2018""\2019";
+  quotes: "\201C" "\201D" "\2018" "\2019";
 }
 
 blockquote::before {
@@ -272,6 +280,7 @@ blockquote::before {
   margin-right: 0.25em;
   vertical-align: -0.4em;
 }
+
 /* Headings */
 h1,
 h2,
@@ -285,37 +294,45 @@ h6 {
   margin-bottom: 8px;
   line-height: 1.5rem;
 }
+
 h1 {
   font-size: 40px;
   line-height: 48px;
 }
+
 h2 {
   font-size: 32px;
   line-height: 38.4px;
 }
+
 h3 {
   font-size: 28px;
   line-height: 33.6px;
 }
+
 h4 {
   font-size: 24px;
   line-height: 28.8px;
 }
+
 h5 {
   font-size: 20px;
   line-height: 24px;
 }
+
 /* Tables */
 table {
   margin-top: 1.5rem;
   border-spacing: 0px;
   border-collapse: collapse;
 }
+
 table td,
 table th {
   padding: 0;
   line-height: 33px;
 }
+
 /* Code blocks */
 code {
   vertical-align: bottom;
@@ -363,13 +380,13 @@ pre[class*="language-"] {
   font-size: 14px;
 }
 
-:not(pre) > code[class*="language-"],
+:not(pre)>code[class*="language-"],
 pre[class*="language-"] {
   background: #272822;
 }
 
 /* Inline code */
-:not(pre) > code[class*="language-"] {
+:not(pre)>code[class*="language-"] {
   padding: 0.1em;
   border-radius: 0.3em;
   white-space: normal;
@@ -441,10 +458,20 @@ pre[class*="language-"] {
 .token.bold {
   font-weight: bold;
 }
+
 .token.italic {
   font-style: italic;
 }
 
 .token.entity {
   cursor: help;
+}
+
+.skip-content {
+  position: absolute;
+  /* left: 0; */
+  top: 0;
+  background-color: antiquewhite;
+  padding: 0 1rem;
+  font-size: 16px;
 }
