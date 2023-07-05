@@ -8,8 +8,21 @@
   <title>Screen Readers</title>
   <link rel="stylesheet" href="../css/style.css" />
   <style>
-    *:focus{
+    *:focus {
       border: 3px solid yellow;
+    }
+
+    .skipLink {
+      position: absolute;
+      /* left: 0; */
+      top: 0;
+      background-color: antiquewhite;
+      padding: 0 1rem;
+      font-size: 16px;
+      transform: translateY(-100%);
+    }
+    .skipLink:focus{
+      transform: translateY(0%);
     }
   </style>
 </head>
@@ -17,6 +30,7 @@
 <body>
   <header>
     <ul>
+      <li><a  class="skipLink" href="#btnToSkip">Skip to content</a></li>
       <li><a href="../index.html">Home</a></li>
       <li>
         <a href="../screen-readers/index.html">Screen Readers</a>
@@ -40,7 +54,6 @@
         <a href="../resources/index.html">Resources</a>
       </li>
     </ul>
-    <a hidden class="skip-content" href="#btnToSkip">Skip to content</a>
   </header>
   <div id="container">
     <h1>Exercise 4</h1>
@@ -51,25 +64,5 @@
     <button id="btnToSkip">Skip to here!</button>
   </div>
 </body>
-<script type="text/javascript">
-  var tofocusElement = document.querySelector('#btnToSkip');
-  var skipAlert = document.querySelector('.skip-content');
-  var shownSkipAlert = false;
-
-  document.addEventListener('keydown', ($event) => {
-    if ($event.key === 'Tab') {
-      if (!shownSkipAlert) {
-        skipAlert.removeAttribute('hidden');
-        shownSkipAlert = true;
-      } else {
-        skipAlert.setAttribute('hidden', '');
-      }
-    }
-  })
-  skipAlert.addEventListener('click', () => {
-    tofocusElement.focus();
-    skipAlert.setAttribute('hidden', '');
-  })
-</script>
 
 </html>
